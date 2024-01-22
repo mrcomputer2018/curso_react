@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
-import './App.css'
+import './App.css';
 import Tasks from './components/Tasks'
-import AddTasks from './components/addTasks'
+import AddTasks from './components/AddTasks';
+
 
 const App = () => {
     const [ tasks, setMTasks] = useState([
@@ -16,7 +17,7 @@ const App = () => {
             <div className="container">
                 <h1>Minhas Tarefas</h1>
 
-                <AddTasks />
+               <AddTasks/>
 
                 <Tasks tasks={tasks}/>
 
