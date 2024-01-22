@@ -17,7 +17,7 @@ const App = () => {
             <div className="container">
                 <h1>Minhas Tarefas</h1>
 
-               <AddTasks/>
+                <AddTasks/>
 
                 <Tasks tasks={tasks}/>
 

@@ -4,12 +4,14 @@ import Button from './Button';
 import './AddTasks.css';
 
 const AddTasks = () => {
-    const title = 'Adicionar';
-    const onClick = () => console.log('Clicou');
+    const onClick = () => {
+        
+    }
+
     const [inputTask, setInputTask] = useState('');
 
     return (
-        <div className='.addtasks-container'>
+        <div className='addtasks-container'>
             <input 
             className='addtasks-input'
             type="text" 
@@ -18,7 +20,11 @@ const AddTasks = () => {
             value={ inputTask}
             />
 
-            <Button tilte={ title }/>
+            <div className='button-container'>
+                <Button onClick={ onClick }>
+                    Adicionar
+                </Button>
+            </div>
         </div>
     );
 }
