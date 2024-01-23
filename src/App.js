@@ -7,7 +7,7 @@ import AddTasks from './components/AddTasks';
 
 
 const App = () => {
-    const [ tasks, setMTasks] = useState([
+    const [ tasks, setTasks] = useState([
         { id: '1', title: 'Estudar programação', completed: false },
         { id: '2', title: 'Ler livros', completed: false },
     ])
@@ -22,7 +22,7 @@ const App = () => {
             }
         ]
 
-        setMTasks(newTasks)
+        setTasks(newTasks)
     }
 
     const handleTaskClick = (taskId) => {
@@ -32,13 +32,13 @@ const App = () => {
             return task
         })
 
-        setMTasks(newTasks)
+        setTasks(newTasks)
     }
 
     const  handleTaskClickRemove = (taskId) => {
         const newTasks = tasks.filter(task => task.id !== taskId)
 
-        setMTasks(newTasks)
+        setTasks(newTasks)
     }
 
     return (
