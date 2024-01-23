@@ -16,8 +16,11 @@ const TaskDetails = () => {
 	return (
 		<>
 			<div className="back-button-container">
-				<Button onClick={handleBackButtonClick}>Voltar</Button>
+				<Button onClick={ handleBackButtonClick }>
+                    Voltar
+                </Button>
 			</div>
+            
 			<div className="task-details-container">
 				<h2>{params.taskTitle}</h2>
 				<p>

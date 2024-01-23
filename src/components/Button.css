@@ -11,4 +11,10 @@
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
+.button:hover {
+    background-color: #444;
+    color: chartreuse;
 }
