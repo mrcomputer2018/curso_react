@@ -10,7 +10,6 @@ const App = () => {
     const [ tasks, setMTasks] = useState([
         { id: '1', title: 'Estudar programação', completed: false },
         { id: '2', title: 'Ler livros', completed: true },
-        
     ])
 
     const handleTaskAddition = (taskTitle) => {
