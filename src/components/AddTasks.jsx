@@ -5,7 +5,7 @@ import './AddTasks.css';
 
 const AddTasks = ({ handleTaskAddition }) => {
 
-    const hamdleAddTaskClick = () => {
+    const handleAddTaskClick = () => {
         handleTaskAddition(inputTask);
         setInputTask('');
     }
@@ -23,7 +23,7 @@ const AddTasks = ({ handleTaskAddition }) => {
             />
 
             <div className='button-container'>
-                <Button onClick={ hamdleAddTaskClick }>
+                <Button onClick={ handleAddTaskClick }>
                     Adicionar
                 </Button>
             </div>

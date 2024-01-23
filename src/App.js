@@ -25,14 +25,26 @@ const App = () => {
         setMTasks(newTasks)
     }
 
+    const handleTaskClick = (taskId) => {
+        const newTasks = tasks.map(task => {
+            if (task.id === taskId) return { ...task, completed: !task.completed }
+
+            return task
+        })
+
+        setMTasks(newTasks)
+    }
+
     return (
         <>
             <div className="container">
                 <h1>Minhas Tarefas</h1>
 
-                <AddTasks handleTaskAddition={  handleTaskAddition }/>
+                <AddTasks 
+                handleTaskAddition={  handleTaskAddition }
+                />
 
-                <Tasks tasks={tasks}/>
+                <Tasks tasks={tasks} handleTaskClick={ handleTaskClick }/>
 
             </div>
         </>

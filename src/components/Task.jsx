@@ -2,13 +2,20 @@ import React from 'react';
 
 import './Task.css';
 
-const Task = ({ task }) => {
+const Task = ({ task, handleTaskClick }) => {
     console.log(task);
 
     return (
-        <div className="task-container">
-            <div className="task-header">
-                <div>{ task.title }</div>
+        <div 
+        className="task-container"
+        style={ 
+            task.completed ? { borderLeft: '6px solid chartreuse' } : {}
+            }
+        >
+            <div  
+            className='task-title'
+            onClick={ () => handleTaskClick(task.id) }>
+                { task.title }
             </div>
         </div>
     );
