@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 import Button from './Button';
 import './AddTasks.css';
 
-const AddTasks = () => {
-    const onClick = () => {
-        
+const AddTasks = ({ handleTaskAddition }) => {
+
+    const hamdleAddTaskClick = () => {
+        handleTaskAddition(inputTask);
+        setInputTask('');
     }
 
     const [inputTask, setInputTask] = useState('');
@@ -16,12 +18,12 @@ const AddTasks = () => {
             className='addtasks-input'
             type="text" 
             placeholder="Adicionar tarefa"
-            onInput={ (event) => setInputTask(event.target.value) }
-            value={ inputTask}
+            onChange={ (event) => setInputTask(event.target.value) }
+            value={ inputTask }
             />
 
             <div className='button-container'>
-                <Button onClick={ onClick }>
+                <Button onClick={ hamdleAddTaskClick }>
                     Adicionar
                 </Button>
             </div>
