@@ -20,5 +20,6 @@
     border: none;
     cursor: pointer;
     padding: 5px;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold;
 }
