@@ -35,6 +35,12 @@ const App = () => {
         setMTasks(newTasks)
     }
 
+    const  handleTaskClickRemove = (taskId) => {
+        const newTasks = tasks.filter(task => task.id !== taskId)
+
+        setMTasks(newTasks)
+    }
+
     return (
         <>
             <div className="container">
@@ -44,7 +50,10 @@ const App = () => {
                 handleTaskAddition={  handleTaskAddition }
                 />
 
-                <Tasks tasks={tasks} handleTaskClick={ handleTaskClick }/>
+                <Tasks 
+                tasks={tasks} 
+                handleTaskClick={ handleTaskClick }
+                handleTaskClickRemove={ handleTaskClickRemove }/>
 
             </div>
         </>
